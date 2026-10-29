@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services - Café Délices</title>
+    <style>
+        /* --- 1. Variables et Reset --- */
+        :root {
+            --primary-color: #6F4E37; /* Marron Café */
+            --secondary-color: #C4A484; /* Beige */
+            --bg-color: #FDFBF7;       /* Crème */
+            --text-color: #333333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- 2. Header --- */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+
+        /* --- 3. Section Principale --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        /* --- 4. Grille des Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* --- 5. Section Réservation (CTA) --- */
+        .cta-section {
+            background-color: var(--secondary-color);
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* --- 6. Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Café Délices</h1>
+        <p>L'excellence du café, du grain à la tasse</p>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Ce que nous offrons</h2>
+
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="icon">☕</div>
+                <h3>Barista Expert</h3>
+                <p>Nos baristas certifiés préparent votre espresso, latte ou cappuccino avec précision et passion.</p>
+                <a href="#" class="btn">Voir le Menu</a>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="icon">🧁</div>
+                <h3>Pâtisseries Maison</h3>
+                <p>Dégustez nos croissants, tartes et gâteaux faits maison chaque matin.</p>
+                <a href="#" class="btn">Goûter</a>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="icon">🌱</div>
+                <h3>Grains Éthiques</h3>
+                <p>Nous sélectionnons uniquement des grains 100% arabica, durables et équitables.</p>
+                <a href="#" class="btn">En savoir plus</a>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card">
+                <div class="icon">🎉</div>
+                <h3>Événements Privés</h3>
+                <p>Réservez notre salon pour vos réunions, anniversaires ou petits déjeuners d'affaires.</p>
+                <a href="#" class="btn">Réserver</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <h2>Prêt à savourer un excellent café ?</h2>
+        <p>Rendez-nous visite ou passez commande en ligne.</p>
+        <br>
+        <a href="#" class="btn" style="background-color: var(--primary-color);">Commander Maintenant</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Café Délices. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
