@@ -1,0 +1,318 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Surface - Café Délices</title>
+
+    <style>
+        :root {
+            --primary-color: #6F4E37;
+            --secondary-color: #C4A484;
+            --bg-color: #FDFBF7;
+            --text-color: #333333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background-color: #4A3325;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* CONTENU */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 3rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: #666;
+        }
+
+        /* GRILLE DES ESPACES */
+        .surface-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .surface-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .surface-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .surface-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .surface-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .surface-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.7rem;
+        }
+
+        .surface-content p {
+            color: #666;
+        }
+
+        /* INFORMATIONS */
+        .info-section {
+            background-color: var(--secondary-color);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .info-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+
+        .info-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .info-card h3 {
+            color: var(--primary-color);
+        }
+
+        /* BOUTON */
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #4A3325;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Café Délices</h1>
+        <p>Un espace chaleureux pour savourer chaque instant</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="service.html">Nos Services</a>
+        <a href="surface.html">Notre Surface</a>
+    </nav>
+
+    <main class="container">
+
+        <h2 class="section-title">Découvrez notre espace</h2>
+
+        <p class="intro">
+            Bienvenue chez Café Délices ! Découvrez un espace confortable,
+            élégant et chaleureux, conçu pour vous offrir un moment de détente
+            autour d'une bonne tasse de café.
+        </p>
+
+        <div class="surface-grid">
+
+            <!-- ESPACE 1 -->
+            <div class="surface-card">
+                <img src="images/salle.jpg" alt="Salle intérieure du café">
+
+                <div class="surface-content">
+                    <h3>☕ Salle intérieure</h3>
+                    <p>
+                        Un espace calme et confortable pour déguster
+                        votre café dans une ambiance agréable.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ESPACE 2 -->
+            <div class="surface-card">
+                <img src="images/terrasse.jpg" alt="Terrasse du café">
+
+                <div class="surface-content">
+                    <h3>🌿 Terrasse</h3>
+                    <p>
+                        Profitez de notre terrasse pour savourer
+                        vos boissons en plein air.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ESPACE 3 -->
+            <div class="surface-card">
+                <img src="images/espace-vip.jpg" alt="Espace VIP">
+
+                <div class="surface-content">
+                    <h3>✨ Espace VIP</h3>
+                    <p>
+                        Un espace privé et élégant pour vos rendez-vous
+                        et moments particuliers.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ESPACE 4 -->
+            <div class="surface-card">
+                <img src="images/espace-travail.jpg" alt="Espace de travail">
+
+                <div class="surface-content">
+                    <h3>💻 Espace de travail</h3>
+                    <p>
+                        Un endroit tranquille pour étudier,
+                        travailler ou utiliser votre ordinateur.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div style="text-align:center;">
+            <a href="service.html" class="btn">Découvrir nos services</a>
+        </div>
+
+    </main>
+
+    <!-- INFORMATIONS -->
+    <section class="info-section">
+
+        <h2>Les caractéristiques de notre espace</h2>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <h3>📏 Superficie</h3>
+                <p>150 m²</p>
+            </div>
+
+            <div class="info-card">
+                <h3>🪑 Capacité</h3>
+                <p>60 places</p>
+            </div>
+
+            <div class="info-card">
+                <h3>🌳 Terrasse</h3>
+                <p>20 places</p>
+            </div>
+
+            <div class="info-card">
+                <h3>📶 Wi-Fi</h3>
+                <p>Gratuit pour les clients</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Café Délices. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
+
